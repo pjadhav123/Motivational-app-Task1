@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>Motivational Msg App</title>
+		 <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+	</head>
+	
+	<body>
+		<center>
+			<h1>Motivational Message App</h1>
+			<h2 id="msg"></h2>
+			<h2 id="aut"></h2>
+
+			<form onsubmit="gm()">
+				<input type="submit" value="Get Quote"/>	
+			</form>
+						
+			<script>
+				function gm()
+				{
+					event.preventDefault();
+					let msg = document.getElementById("msg");
+					let aut = document.getElementById("aut");
+			
+					let url = "https://quotes-api-self.vercel.app/quote";
+					fetch(url)
+					.then(res=>res.json())
+					.then(data=>{
+						msg.innerHTML = data.quote;
+						aut.innerHTML = data.author;
+					})
+					.catch(err=>msg.innerHTML="issue+err");
+				}
+			</script>
+		</center>
+	</body>
+</html>

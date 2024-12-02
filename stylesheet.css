@@ -1,0 +1,84 @@
+/* General Reset */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff6a00, #ee0979); /* Orange-Pink Gradient */
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Center Content */
+center {
+  background: rgba(255, 255, 255, 0.15); /* Transparent white background */
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin: 15px 0;
+  line-height: 1.4;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Highlight the Author's Name */
+#aut {
+  font-weight: bold;
+  color: #ffcc00; /* Bright Yellow for emphasis */
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+}
+
+/* Form Styling */
+form {
+  margin-top: 30px;
+}
+
+input[type="submit"] {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #f12711, #f5af19); /* Red-Yellow Gradient */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(241, 39, 17, 0.5);
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #f5af19, #f12711); /* Inverted Gradient */
+  box-shadow: 0 6px 20px rgba(241, 39, 17, 0.8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
